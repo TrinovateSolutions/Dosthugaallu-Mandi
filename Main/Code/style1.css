@@ -1,0 +1,208 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Playfair Display', serif;
+  background-color: #4B1C1C;
+  color: #ffffff;
+}
+
+header {
+  text-align: center;
+}
+
+.slide-header {
+  background-color: #4B1C1C;
+  color: #ffffff;
+  padding: 3rem 1rem 5rem;
+  position: relative;
+  animation: slideDown 1.2s ease-out forwards;
+  clip-path: ellipse(150% 100% at 50% 0%);
+  z-index: 0;
+}
+
+@keyframes slideDown {
+  0% {
+    height: 0vh;
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  100% {
+    height: 50vh;
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+nav {
+  opacity: 0;
+  animation: fadeInNav 0.8s ease-in forwards;
+  animation-delay: 1.4s;
+  margin: 5rem 0;
+}
+
+@keyframes fadeInNav {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+nav a {
+  margin: 0 3rem;
+  font-weight: bold;
+  font-size: 1.1rem;
+  text-decoration: none;
+  color: #ffffff;
+  transition: 0.3s ease;
+}
+
+nav a:hover {
+  color: #FFD1D1;
+}
+
+.logo-container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin-top: -150px;
+  z-index: 2;
+}
+
+.spin-img {
+  height: 400px;
+  opacity: 0;
+  animation: fadeInSpin 1s ease-in forwards, spin 3s linear infinite;
+  animation-delay: 2.2s, 2.2s;
+}
+
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+@keyframes fadeInSpin {
+  from { opacity: 0.2; }
+  to { opacity: 0.8; }
+}
+
+.diplay-name {
+  position: absolute;
+  height: 250px;
+  z-index: 2;
+  opacity: 0;
+  animation: fadeInLogo 1s ease-in forwards;
+  animation-delay: 2.4s;
+}
+
+@keyframes fadeInLogo {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.tagline {
+  font-size: 2.5rem;
+  text-align: center;
+  margin-top: 10px;
+  margin-bottom: 100px;
+  color: #FFD1D1;
+  opacity: 0;
+  animation: fadeInTagline 1.2s ease-out forwards;
+  animation-delay: 2.6s;
+  letter-spacing: 1px;
+  padding: 0 1rem;
+}
+
+@keyframes fadeInTagline {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.about-us {
+  background-color: #5C1F1F;
+  color: #ffffff;
+}
+
+.about-us-matter h2 {
+  color: #FFD1D1;
+}
+
+.about-us-matter h2::after {
+  background: #FFD1D1;
+}
+
+.branches {
+  background-color: #5C1F1F;
+  color: #ffffff;
+}
+
+.branches h2 {
+  color: #FFD1D1;
+}
+
+.branches > div > div {
+  background: #6E2323;
+  color: #ffffff;
+}
+
+.happy-customers {
+  background-color: #5C1F1F;
+  color: #ffffff;
+}
+
+.happy-customers h3 {
+  color: #FFD1D1;
+}
+
+.gallery-section {
+  background-color: #6E2323;
+  color: #ffffff;
+}
+
+.gallery-section h2 {
+  color: #FFD1D1;
+}
+
+.gallery-card {
+  background-color: #5C1F1F;
+  color: #ffffff;
+}
+
+.site-footer {
+  background-color: #4B1C1C;
+  color: #ffffff;
+}
+
+.footer-links a:hover,
+.footer-links h4,
+.footer-contact h4,
+.footer-social h4 {
+  color: #FFD1D1;
+}
+
+form input {
+  border: 1px solid #FFD1D1;
+  background-color: #fff;
+  color: #000;
+}
+
+form button {
+  background-color: #FFD1D1;
+  color: #4B1C1C;
+}
+
+form button:hover {
+  background-color: #e6bcbc;
+  color: #4B1C1C;
+}

@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dosthugaallu Mandi</title>
+  <link rel="icon" href="/Main/Images/Bg-Logo.png" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <!-- Header with logo, title, contact info, and navigation -->
+    <header class="slide-header">
+      <div class="nav-brand">
+        <img
+          src="/Main/Images/Logo.png"
+          alt="Dosthugaallu Logo"
+          class="nav-logo"
+        />
+
+        <div class="brand-text">
+                      <h1 class="title-main">Dosthugaallu</h1>
+          <h2>Mandi & Restaurant</h2>
+        </div>
+
+        <div class="contact-info">
+          <a href="tel:+919966660134" class="contact-line">+91-99666-60134</a>
+          <a href="mailto:dosthugaallumandi@gmail.com" class="contact-line"
+            >dosthugaallumandi@gmail.com</a
+          >
+        </div>
+      </div>
+
+      <!-- Desktop navigation -->
+      <nav class="nav-bar-contents">
+        <a href="/Main/Code/index.html">Welcome</a>
+        <a href="/Main/Code/gallery.html">Gallery</a>
+        <a href="/Main/Code/contactus.html">Franchise</a>
+      </nav>
+
+      <!-- Mobile navigation -->
+      <nav class="mobile-nav" id="mobileNav">
+        <a href="/Main/Code/index.html">Welcome</a>
+        <a href="/Main/Code/gallery.html">Gallery</a>
+        <a href="/Main/Code/contactus.html">Franchise</a>
+      </nav>
+
+      <!-- Hamburger icon -->
+      <div class="hamburger" id="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </header>
+    <div>
+        <h3 class="franchise-heading">Looking For A Franchise?</h3>
+    </div>
+    <div class="form-main">
+        <div class="form-logo">
+            <img src="/Main/Images/Bg-Logo.png" alt="Logo">
+        </div>
+        <div class="form-container">
+            <div><h3 class="fill-form">Fill Out This Form</h3></div>
+            <form action="submit_form.php" method="POST">
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" placeholder="Enter Your Name" required>
+
+                <label for="mobile">Mobile Number</label>
+                <input type="tel" id="mobile" name="mobile" pattern="[0-9]{10}" inputmode="numeric" placeholder="Enter Your Number" required>
+
+                <label for="location">Location</label>
+                <input type="text" id="location" name="location" placeholder="City or Area" required>
+
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+    </div>
+ <!-- Footer Section -->
+    <footer class="site-footer">
+        <div class="footer-container">
+
+            <!-- Brand logo in footer -->
+            <div class="footer-brand">
+                <img src="/Main/Images/Logo.png" alt="Logo" class="footer-logo">
+                <!-- Optional: Add tagline if needed -->
+                <!-- <p>Where Love Meets Taste on Every Plate.</p> -->
+            </div>
+
+            <!-- Quick links section -->
+            <div class="footer-links">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="/Main/Code/index.html">Welcome</a></li>
+                    <li><a href="/Main/Code/gallery.html">Gallery</a></li>
+                    <li><a href="/Main/Code/contactus.html">Contact Us</a></li>
+                </ul>
+            </div>
+
+            <!-- Contact information -->
+            <div class="footer-contact">
+                <h4>Contact</h4>
+          <p>Kukatpally, Hyderabad</p>
+          <p>Phone: +91-99666-60134</p>
+          <p>Email: dosthugaallumandi@gmail.com</p>
+            </div>
+
+            <!-- Social media icons -->
+            <div class="footer-social">
+                <h4>Follow Us</h4>
+                <div class="social-icons">
+                    <!-- Font Awesome icons linked to social profiles -->
+                    <a href="https://www.facebook.com" target="_blank" aria-label="Facebook">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a href="https://www.twitter.com" target="_blank" aria-label="Twitter">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                    <a href="https://www.instagram.com" target="_blank" aria-label="Instagram">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Bottom copyright -->
+        <div class="footer-bottom">
+            <p>© 2025 Dosthugaallu Mandi. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+<script>
+    window.addEventListener('DOMContentLoaded', () => {
+        // Delay to allow navbar to fully appear (e.g., 800ms)
+        setTimeout(() => {
+            const heading = document.querySelector('.franchise-heading');
+            const form = document.querySelector('.form-main');
+
+            // Animate heading
+            if (heading) {
+                heading.classList.add('animate-in');
+            }
+
+            // Delay form animation slightly after heading
+            setTimeout(() => {
+                if (form) {
+                    form.classList.add('animate-in');
+                }
+            }, 300); // slight delay between heading and form
+        }, 800); // wait for navbar to appear
+    });
+    const hamburger = document.querySelector(".hamburger");
+        const mobileNav = document.querySelector(".mobile-nav");
+        hamburger.addEventListener("click", () => {
+          mobileNav.classList.toggle("show");
+        });
+</script>
+</html>
