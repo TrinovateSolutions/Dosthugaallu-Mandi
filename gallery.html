@@ -224,11 +224,12 @@
     </footer>
 </body>
 <script>
-  window.addEventListener('load', () => {
-    // Delay to match header animation
+  document.addEventListener("DOMContentLoaded", () => {
+    // Wait for header animation to finish
     setTimeout(() => {
-      document.getElementById('gallery').classList.add('show');
-    }, 2000);
+              document.querySelector('.gallery-section')?.classList.add('show');
+      document.querySelector('.happy-customers')?.classList.add('show');
+    }, 2800); // slightly after 2.6s tagline animation
   });
 
   const hamburger = document.querySelector(".hamburger");

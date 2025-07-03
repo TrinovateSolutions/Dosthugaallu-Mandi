@@ -956,6 +956,16 @@ form button:hover {
   padding: 3rem 2rem;
   background-color: #fffaf5;
   border-bottom: 1px solid #eee;
+    opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 1s ease-out, transform 1s ease-out;
+}
+.blog-post.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+.blog-post + .blog-post {
+  margin-top: 3rem; /* Adjust as needed */
 }
 
 .blog-container {

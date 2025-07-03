@@ -151,3 +151,15 @@
       </div>
     </footer>
 </body>
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    // Wait until header animations complete (e.g., slide + nav fade-in + tagline)
+    setTimeout(() => {
+      const blogPosts = document.querySelectorAll('.blog-post');
+      blogPosts.forEach(post => {
+        post.classList.add('show');
+      });
+    }, 2800); // Matches tagline animation delay
+  });
+</script>
+</html>
