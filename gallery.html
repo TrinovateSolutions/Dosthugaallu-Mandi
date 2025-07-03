@@ -48,6 +48,7 @@
         <a href="index.html">Welcome</a>
         <a href="/gallery.html">Gallery</a>
         <a href="/contactus.html">Franchise</a>
+        <a href="/blog.html">Blog</a>
       </nav>
 
       <!-- Mobile navigation -->
@@ -55,10 +56,12 @@
         <a href="/index.html">Welcome</a>
         <a href="/gallery.html">Gallery</a>
         <a href="/contactus.html">Franchise</a>
+        <a href="/blog.html">Blog</a>
       </nav>
 
       <!-- Hamburger icon -->
       <div class="hamburger" id="hamburger">
+        <span></span>
         <span></span>
         <span></span>
         <span></span>
@@ -72,30 +75,30 @@
             <!-- Each gallery-card holds one product image and its name -->
             <div class="gallery-card">
                 <img src="/Images/11.jpg" alt="Customer Image">
-                <p class="product-name">Family Feast</p>
+                <p class="product-name">Pepper Chicken Mandi</p>
             </div>
 
             <div class="gallery-card">
                 <img src="/Images/22.webp" alt="Customer Image">
-                <p class="product-name">Special Dum Biryani</p>
+                <p class="product-name">Al-Faham Mandi</p>
             </div>
 
             <div class="gallery-card">
                 <img src="/Images/33.avif" alt="Customer Image">
-                <p class="product-name">Grill Combo</p>
+                <p class="product-name">Chicken 65</p>
             </div>
 
             <div class="gallery-card">
                 <img src="/Images/44.jpg" alt="Customer Image">
-                <p class="product-name">Mutton Mandi</p>
+                <p class="product-name">6-Item Platter</p>
             </div>
 
             <div class="gallery-card">
                 <img src="/Images/55.avif" alt="Customer Image">
-                <p class="product-name">Tandoori Platter</p>
+                <p class="product-name">Chill Chicken Mandi</p>
             </div>
 
-            <!-- Duplicate cards (for demonstration or future addition) -->
+            <!-- Duplicate cards (for demonstration or future addition)
             <div class="gallery-card">
                 <img src="/Images/11.jpg" alt="Customer Image">
                 <p class="product-name">Family Feast</p>
@@ -144,10 +147,28 @@
             <div class="gallery-card">
                 <img src="/Images/55.avif" alt="Customer Image">
                 <p class="product-name">Tandoori Platter</p>
-            </div>
+            </div> -->
 
         </div>
     </section>
+    <!-- Happy Customers slider -->
+      <div class="happy-customers">
+        <h3>Happy Customers</h3>
+        <div class="happy-img">
+          <div class="slider-track">
+            <img src="/Images/IMG_5368.JPG" alt="Customer Image" />
+            <img src="/Images/IMG_5679.JPG" alt="Customer Image" />
+            <img src="/Images/IMG_5886.JPG" alt="Customer Image" />
+            <img src="/Images/IMG_5888.JPG" alt="Customer Image" />
+            <img src="/Images/IMG_5976.JPG" alt="Customer Image" />
+            <img src="/Images/IMG_5368.JPG" alt="Customer Image" />
+            <img src="/Images/IMG_5679.JPG" alt="Customer Image" />
+            <img src="/Images/IMG_5886.JPG" alt="Customer Image" />
+            <img src="/Images/IMG_5888.JPG" alt="Customer Image" />
+            <img src="/Images/IMG_5976.JPG" alt="Customer Image" />
+          </div>
+        </div>
+      </div>
 
     <!-- Footer Section -->
     <footer class="site-footer">
@@ -204,15 +225,30 @@
 </body>
 <script>
   window.addEventListener('load', () => {
-    // Delay to match header animation (1.2s slideDown + 0.8s fadeInNav)
+    // Delay to match header animation
     setTimeout(() => {
       document.getElementById('gallery').classList.add('show');
-    }, 2000); // Adjust this value to match your total header animation duration
+    }, 2000);
   });
+
   const hamburger = document.querySelector(".hamburger");
-        const mobileNav = document.querySelector(".mobile-nav");
-        hamburger.addEventListener("click", () => {
-          mobileNav.classList.toggle("show");
-        });
+  const mobileNav = document.querySelector(".mobile-nav");
+  hamburger.addEventListener("click", () => {
+    mobileNav.classList.toggle("show");
+  });
+
+  // --- ADD THIS: For happy-customers visibility on scroll ---
+  const happyCustomers = document.querySelector('.happy-customers');
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        happyCustomers.classList.add('visible-up');
+        observer.unobserve(happyCustomers); // Optional: run only once
+      }
+    });
+  }, { threshold: 0.3 });
+
+  observer.observe(happyCustomers);
 </script>
+
 </html>
