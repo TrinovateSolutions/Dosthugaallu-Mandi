@@ -161,5 +161,10 @@
       });
     }, 2800); // Matches tagline animation delay
   });
+  const hamburger = document.querySelector(".hamburger");
+        const mobileNav = document.querySelector(".mobile-nav");
+        hamburger.addEventListener("click", () => {
+          mobileNav.classList.toggle("show");
+        });
 </script>
 </html>
